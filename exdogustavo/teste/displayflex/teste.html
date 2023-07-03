@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        display: flex;
+        flex-direction: row; /* row- linha, collumn- coluna, row/collumn-reverse: para ordenar ao contrário*/
+        flex-wrap: wrap; /* quandp atingir o tamanho máximo quebra a linha*/
+        justify-content: space-between; /* space-between: maior espaço entre eles; space-envenly: o mesmo espaço entre eles; space-around: o mesmo espaçamento ao centro; center: ao centro; flex-start alinham-se ao início; flex end: alinha se ao final*/
+        align-items: center;/* alinhamento no eixo y*/
+                    /*flex- start: começa em cima 
+                      flex-end: começa em baixo*/
+        /*
+        flex-direction: column--- inverte tudo, ou seja justif-content é vertical e o algin-itens é na horizontal 
+        */
+
+    }
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <div>1 </div>
+    <div>2</div>
+</body>
+</html>
