@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> adicionando conteudos dentro de iframes</title>
+    <style>
+        body{
+            height: 100vh;
+        }
+        iframe#video{
+            position: absolute;
+            width: 70vw;
+            height: calc(70vw * 0.57);
+        }
+        iframe#maps{
+            position: absolute;
+            top: 70%;
+            left: 10%;
+        }
+        iframe#waze{
+            position: absolute;
+            top: 120%;
+            left: 10%;
+        }
+        iframe#slides{
+            position: absolute;
+            top: 160%;
+            left: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h1>conteudos dentro de iframes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis officia atque recusandae illum animi sequi. Et fugit impedit reiciendis qui pariatur nesciunt at officia corrupti repellendus maxime, dolorum suscipit numquam!</p>
+    <h2>Vídeos</h2>
+    <iframe id="video" width="760" height="515" src="https://www.youtube.com/embed/dzhJsc1YszU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h2> Mapas do google</h2>
+    <iframe  id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24888.00862933029!2d-9.222028534423822!3d38.76367926823294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecd3c20e26ff7%3A0xb77769a73e2e8497!2sUBBO!5e0!3m2!1spt-PT!2spt!4v1688488013691!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h2>Mapas do waze</h2>
+
+    <iframe id="waze" src="https://embed.waze.com/iframe?zoom=16&lat=40.735863&lon=-73.991084&ct=livemap" width="600" height="450" allowfullscreen></iframe>
+
+    <iframe id="slides" src="https://docs.google.com/document/d/e/2PACX-1vRJtYpcrPao38PynBFAdeJV7VXI-4mHUHMywfC6tQlv8i2DCInh4szSBCAkZBG3mNr1uDPDsQ0KTMeA/pub?embedded=true"></iframe>
+</body>
+</html>
