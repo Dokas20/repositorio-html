@@ -27,10 +27,11 @@ body{
     width: 311px;
 }
 #telemovel iframe{
+    background-color: #F0F1F3;
     padding: 0%;
     position: absolute;
-    width: 288px;
-    height: 488px;
+    width: 285px;
+    height: 489px;
     transform: translate(-295px, 73px);
 }
 #exter img{
@@ -41,6 +42,6 @@ body{
 }
 #exter img:hover{
     transform: scale(1.1); box-shadow: 4px 4px 10px 3px rgba(0, 0, 0, 0.342); border: 2px solid white;    border: 2px solid white;
-    transition-duration: 100ms,
+    transition-duration: 100ms, }
 
 

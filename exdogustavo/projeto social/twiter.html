@@ -5,11 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        img{
-            width: 267px;
+                                ::-webkit-scrollbar{
+            width: 0px;
+            height: 0px;
+        }
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+         img{
+            display: block;
+            height: 94%;
+            width: 93%;
+            transform:translate(-2px, 10px) ;
+            margin: auto;
         }
         div{
-            width: 267px;
+            margin: 0px auto;
+            width: calc(95% - 2px);
+            transform: translate(-4px, -6px);
             padding: 20px 0px;
             background-color: red;
             text-align: center;
