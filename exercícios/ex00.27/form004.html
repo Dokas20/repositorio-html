@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            border-radius: 10px;
+            border: 2px solid darkblue;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <label for="icor">Cor</label>
+            <input type="color" name="cor" id="icor">
+            <p><label for="inivel">Nivel de satisfação</label>
+            <input type="range" name="Nivel" id="inivel" min="1" max="10" value="10"></p>
+            <p>
+                <label for="ifot"> Foto de Perfil</label>
+                <input type="file" name="Foto" id="ifot">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
+    <div style="height: 200px;"></div>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <label for="iset"> Estado:</label>
+        <select name="set" id="iset" >
+            <option value="SP"> São paulo</option>
+            <optgroup label="Tuga">
+                <option value="PT" selected>Portugal</option>
+                <option value="Li">Lisboa</option>
+            </optgroup>
+        </select>
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="Profissão" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option >Sou tuga queralho</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagem</label> <br>
+            <textarea name="imsg" id="ismg" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpesa">
+        </p>
+    </form>
+</body>
+</html>

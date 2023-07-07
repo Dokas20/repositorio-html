@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p><label for="in1">Número:</label>
+        <input required type="number" name="nl" id="in1" min="1" max="50"  oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">Número:</label>
+            <input type="number" name="n2" id="in2" min="1" max="50 required" oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="isoma">Soma:</label>
+            <output id="isoma" >
+                0
+            </output>
+        </p>
+        <p>
+            <input type="submit" value="Envia">
+            <input type="reset" value="Limpa">
+        </p>
+
+    </form>
+    <div style="height: 200px;"></div>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="irag">Nota:</label>
+            <input type="range" name="rag" id="irag" min="1" max="20" value="5" oninput="ival.innerHTML= Number(irag.value)">
+            <output id="ival">5</output>
+        </p>
+    </form>
+</body>
+</html>
