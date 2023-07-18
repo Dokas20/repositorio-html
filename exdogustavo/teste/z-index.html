@@ -21,7 +21,7 @@
             background-color: blanchedalmond;
             width: 50vw;
             height: 50vh;
-            z-index: -1;
+            z-index: -  1;
         }
         div#yo{
             display: block;
@@ -29,9 +29,18 @@
             top: 10%;
             left: 20%;
             width: 50%;
-            height: 50%;
+            height: 40%;
+
             background-color: brown;
-            transform: translate(50px, 100px) skew(15deg) rotate(.25turn) scale(0.75); 
+            transform: translate(50px, 100px) ;
+            animation-name: skew;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+        @keyframes skew {
+            from{transform: skew(90deg);}
+            to{transform: skew(0deg)}
         }
     </style>
 </head>
