@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            height: 80vh;
+            width: 60vw;
+            border: 3px solid red;
+            display: grid;
+            grid-template-columns: 100px 2fr minmax(100px, 3fr) ;
+            grid-template-rows: repeat(3, 1fr) ;
+            grid-gap: 3em 1em;
+        }
+        div{
+            border: 1px solid black;
+        }
+        /*
+        div{
+            grid-row: 1/3 = vai do um ao tres
+            grid-colluns: 1/5 = vai do um ao 5
+            Short Hand:
+            grid-area: 2 / 4 / 4 /6 ; (2/4) é onde comeca o row e a collumns respetivamente e os restantes é onde termina respetivamente
+            grid-row: spans 2; vai expandir dois para o lado
+        }
+        */
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+        </div>
+        <div></div>
+        <div></div>
+    </main>
+</body>
+</html>
