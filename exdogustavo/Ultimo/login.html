@@ -18,16 +18,18 @@
             <div id="principal">
                 <h1>Login</h1>
                 <p>Seja bem vindo(a) novamente, faça login para poder acessar a sua conta</p>
-                <form action="#" method="post" autocomplete="on">
+                <form action="#" method="post" autocomplete="on" id="login-form">
                     <div class="form">
                         <label for="iemail"><img src="bust-in-silhouette_1f464-20px2.png" alt="User img"
                                 id="user"></label>
-                        <input type="email" name="email" id="iemail" required  placeholder="Email"
-                            autocomplete="email">
+                        <input type="email" name="email" id="iemail"   required  placeholder="Email"
+                        autocomplete="email" >
+
+                        <p style="display: none;" id="wrong">🔴 </p>
                     </div>
                     <div class="form">
                         <label for="ipass"><img src="key_1f511pq.png" alt="password" id="key"></label>
-                        <input type="password" name="pass" id="ipass"required placeholder="password" autocomplete="current-password"   
+                        <input type="password" name="pass" id="ipass" -required placeholder="password" autocomplete="current-password"   
                         minlength="8"   maxlength="15">
                     </div>
                     <input type="submit" value="Enviar" id="enviar">
@@ -35,53 +37,41 @@
             </div>
             </form>
         </section>
-        
+        <div id="erro"></div>
     </main>
 
-   <script> 
-       let form = document.querySelector('form')
-        let emailInput = document.querySelector('input#iemail')
-        let passInput = document.getElementById('ipass')
-        form.addEventListener('submit', (event) => {
-            event.preventDefault() // evitar que seja enviado antes da validacao
-            // verificaçoes
-            // vereficar o email
-            if (emalInput.value === '' || !isEmailValid(emailInput.value)) {
-                alert('Por favor, prencha o seu email corretamente.')
-                return
-            } 
-            // verifivar a password 
+    <script>
+           document.getElementById('iemail').addEventListener('input', (e)=>{
+               console.log(e.target.value)
+               var reg = /^[a-zA-Z\._\-0-9]*[@][a-zA-Z]*[\.][a-z]{1,4}$/
+               var emailval = e.target.value
+               var valid= reg.test(emailval) 
+                   if (!valid) {
+                document.getElementById('wrong').style.display='block'
+            } else {
+                document.getElementById('wrong').style.display='none'
 
-            if(!PassValidation(passInput.value)){
-                alert('Por favor, prencha a sua pass corretamente.')
-                return
             }
-             //se todos os campos estiverem corretamente prenchidos
-            form.submit()
-        })
-        // funcao que valida email
-        function isEmailValid(email) {
-            // criar a regEX
-            let emailValid = new RegExp(
+               
+       
+           }) 
 
-            /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.[a-z]?$/
-            )
-            if(emailValid.test(email)){
-                return true
-            } else{
-                return false
-            }
-        }  
-        function PassValidation(pass){
-            let passValid = new RegExp(
-                /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.[a-z]?$/
-            )
-            if(passValid.test(pass)){
-                return true
-            } else{
-                return false
-            }
-        }      
+        const forme = document.getElementById('login-form')
+        const emailInput = document.getElementById('iemail')
+        const passInput = document.getElementById('ipass')
+        const erroValid = document.getElementById('erro')
+
+        forme.addEventListener('submit',  (e) => {
+            let mess = []
+               if(!emailInput.value.match(/^[a-zA-Z\._\-0-9]*[@][a-zA-Z]*[\.][a-z]{1,4}$/)) {
+                    mess.push('emailInvalid')
+               }  
+               if(mess.length > 0 ){
+                e.preventDefault()
+               }
+       
+        }) 
+
     </script>
 
 </body>
