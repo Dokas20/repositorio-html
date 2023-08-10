@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 98vh;
+        }
+       #front{
+        border: none;
+        outline: none;
+        height: 300px;
+        width: 250px;
+        background-color: black;
+        text-align: center;
+        border-radius: 12px;
+        color: white;
+        padding: 5px;
+        padding-top: 10px;
+        overflow: hidden;
+       } 
+       #back{
+        position: relative;
+        height: 307px;
+        width: 255px;
+        overflow: hidden;
+        background-color: transparent;
+        transform: translate(-100% );
+        z-index: -1;
+        border-radius: 12px;
+       }
+       #back::before{
+        content: '';
+        bottom: 30%;
+        right: 50%;
+        position: absolute;
+        background-image: linear-gradient(0deg, transparent, transparent, rgb(29, 108, 255), rgb(29, 108, 255) , rgb(29, 108, 255));
+        height: 300px;
+        width: 200px;
+        transform-origin: bottom right;
+        animation: rot 4s linear infinite;
+        z-index: 1;
+
+
+    }
+    #back::after{
+        content: '';
+        bottom: 30%;
+        right: 50%;
+        position: absolute;
+        background-image: linear-gradient(0deg, transparent, transparent,rgb(29, 108, 255),rgb(29, 108, 255) , rgb(29, 108, 255));
+        height: 300px;
+        width: 200px;
+        transform-origin: bottom right;
+        animation: rot 4s linear infinite;
+        z-index: 1;
+        animation-delay: -2s;
+
+    }
+    @keyframes rot{
+        from{ transform: rotate(0deg);}
+        to { transform: rotate(360deg);}
+    }
+
+    </style>
+</head>
+<body>
+    <div id="front"> adhadhawd
+        hawhdahdaw
+    </div>
+    <div id="back"></div>
+</body>
+</html>

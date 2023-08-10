@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(10, 8, 41);
+            width: 100vw;
+            display: flex;
+            justify-content: end;
+        }
+        body.white{
+            background-color: white;
+        }
+        button{
+            display: block;
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 2em;
+            margin-right: 100px;
+            margin-top: 100px;
+        }
+        button.black{
+            color: rgb(10, 8, 41);
+        }
+        button:hover{
+            opacity: 0.60;
+        }
+    </style>
+</head>
+<body >
+    <button id="button" >🌣 </button>
+    <script>
+           //document.body.setAttribute("id","")
+        //document.body.id= 'whit'
+        /*
+        function mode(){
+        document.body.classList.toggle("white")
+        document.getElementById('button').classList.toggle('black')*/
+
+        document.getElementById('button').addEventListener('click', () =>{
+            document.body.classList.toggle("white")
+        document.getElementById('button').classList.toggle('black')
+        })
+    </script>
+</body>
+</html>
